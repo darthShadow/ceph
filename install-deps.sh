@@ -432,6 +432,7 @@ else
         fi
         $SUDO apt-get install -y devscripts equivs
         $SUDO apt-get install -y dpkg-dev
+        $SUDO apt-get install -y reprepo
         ensure_python3_sphinx_on_ubuntu
         case "$VERSION" in
             *Bionic*)

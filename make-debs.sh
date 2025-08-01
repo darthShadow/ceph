@@ -16,6 +16,9 @@
 #
 set -xe
 
+# For Ubuntu 24.04
+export DEB_CPPFLAGS_SET="-Wdate-time -D_FORTIFY_SOURCE=2"
+
 . /etc/os-release
 base=${1:-/tmp/release}
 releasedir=$base/$NAME/WORKDIR
