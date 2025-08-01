@@ -443,8 +443,14 @@ else
                 [ ! $NO_BOOST_PKGS ] && install_boost_on_ubuntu focal
                 ;;
             *Jammy*)
-                [ ! $NO_BOOST_PKGS ] && install_boost_on_ubuntu jammy
                 $SUDO apt-get install -y gcc
+                ensure_decent_gcc_on_ubuntu 12 jammy
+                [ ! $NO_BOOST_PKGS ] && install_boost_on_ubuntu jammy
+                ;;
+            *Noble*)
+                $SUDO apt-get install -y g++-14
+                ensure_decent_gcc_on_ubuntu 14 noble
+                [ ! $NO_BOOST_PKGS ] && install_boost_on_ubuntu noble
                 ;;
             *)
                 $SUDO apt-get install -y gcc
