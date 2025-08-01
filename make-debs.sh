@@ -56,7 +56,7 @@ perl -pi -e 's/--dbg-package.*//' ceph-$vers/debian/rules
 # directory is included in the sources and the upstream version will
 # change each time it is modified.
 #
-dvers="$vers-1"
+dvers="$vers~darthshadow"
 #
 # update the changelog to match the desired version
 #
